@@ -50,7 +50,7 @@ import { Category } from '../../models/category.model';
         <div class="products-grid">
           <div *ngFor="let product of featuredProducts" class="product-card">
             <div class="product-img">
-              <img *ngIf="product.imagen" [src]="'https://sabina-utf1.onrender.com' + product.imagen" [alt]="product.nombre">
+              <img *ngIf="product.imagen" [src]="product.imagen.startsWith('http') ? product.imagen : 'https://sabina-utf1.onrender.com' + product.imagen" [alt]="product.nombre">
               <div *ngIf="!product.imagen" class="product-placeholder">🍄</div>
               <span class="product-badge" *ngIf="product.destacado">Destacado</span>
             </div>

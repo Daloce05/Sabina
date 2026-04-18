@@ -1,5 +1,6 @@
 const { Op } = require('sequelize');
 const { Product, Category } = require('../models');
+const { uploadToSupabase } = require('../config/supabaseStorage');
 
 const productController = {
   // GET /api/products
@@ -63,7 +64,11 @@ const productController = {
   async crear(req, res) {
     try {
       const { nombre, descripcion, precio, stock, categoryId, destacado } = req.body;
-      const imagen = req.file ? `/uploads/${req.file.filename}` : null;
+      let imagen = null;
+
+      if (req.file) {
+        imagen = await uploadToSupabase(req.file, 'products');
+      }
 
       const product = await Product.create({
         nombre, descripcion, precio, stock, categoryId, destacado, imagen
@@ -88,7 +93,7 @@ const productController = {
       const updateData = { nombre, descripcion, precio, stock, categoryId, destacado, activo };
 
       if (req.file) {
-        updateData.imagen = `/uploads/${req.file.filename}`;
+        updateData.imagen = await uploadToSupabase(req.file, 'products');
       }
 
       await product.update(updateData);

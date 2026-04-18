@@ -15,7 +15,7 @@ import { Product } from '../../models/product.model';
         <a routerLink="/productos" class="back-link">&larr; Volver a productos</a>
         <div class="detail-grid">
           <div class="detail-img">
-            <img *ngIf="product.imagen" [src]="'https://sabina-utf1.onrender.com' + product.imagen" [alt]="product.nombre">
+            <img *ngIf="product.imagen" [src]="product.imagen.startsWith('http') ? product.imagen : 'https://sabina-utf1.onrender.com' + product.imagen" [alt]="product.nombre">
             <div *ngIf="!product.imagen" class="placeholder">🍄</div>
           </div>
           <div class="detail-info">

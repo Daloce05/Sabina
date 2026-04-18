@@ -1,4 +1,5 @@
 const { Category } = require('../models');
+const { uploadToSupabase } = require('../config/supabaseStorage');
 
 const categoryController = {
   // GET /api/categories
@@ -31,7 +32,11 @@ const categoryController = {
   async crear(req, res) {
     try {
       const { nombre, descripcion } = req.body;
-      const imagen = req.file ? `/uploads/${req.file.filename}` : null;
+      let imagen = null;
+
+      if (req.file) {
+        imagen = await uploadToSupabase(req.file, 'categories');
+      }
 
       const category = await Category.create({ nombre, descripcion, imagen });
       res.status(201).json({ success: true, message: 'Categoría creada.', data: category });
@@ -53,7 +58,7 @@ const categoryController = {
       const updateData = { nombre, descripcion, activo };
 
       if (req.file) {
-        updateData.imagen = `/uploads/${req.file.filename}`;
+        updateData.imagen = await uploadToSupabase(req.file, 'categories');
       }
 
       await category.update(updateData);

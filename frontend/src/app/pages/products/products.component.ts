@@ -31,7 +31,7 @@ import { Category } from '../../models/category.model';
           <div *ngFor="let product of products" class="product-card">
             <a [routerLink]="['/producto', product.id]" class="product-link">
               <div class="product-img">
-                <img *ngIf="product.imagen" [src]="'https://sabina-utf1.onrender.com' + product.imagen" [alt]="product.nombre">
+                <img *ngIf="product.imagen" [src]="product.imagen.startsWith('http') ? product.imagen : 'https://sabina-utf1.onrender.com' + product.imagen" [alt]="product.nombre">
                 <div *ngIf="!product.imagen" class="product-placeholder">🍄</div>
                 <span class="badge" *ngIf="product.destacado">Destacado</span>
               </div>

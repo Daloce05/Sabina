@@ -21,7 +21,7 @@ import { CartService } from '../../services/cart.service';
           <div class="cart-items">
             <div *ngFor="let item of cartService.items" class="cart-item">
               <div class="item-img">
-                <img *ngIf="item.product.imagen" [src]="'https://sabina-utf1.onrender.com' + item.product.imagen" [alt]="item.product.nombre">
+                <img *ngIf="item.product.imagen" [src]="item.product.imagen.startsWith('http') ? item.product.imagen : 'https://sabina-utf1.onrender.com' + item.product.imagen" [alt]="item.product.nombre">
                 <div *ngIf="!item.product.imagen" class="placeholder">🍄</div>
               </div>
               <div class="item-info">
