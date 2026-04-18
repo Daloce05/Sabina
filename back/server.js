@@ -33,7 +33,11 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:4200',
+  origin: [
+    'http://localhost:4200',
+    'https://sabina-utf1.onrender.com',
+    /\.onrender\.com$/
+  ],
   credentials: true
 }));
 app.use(express.json());
