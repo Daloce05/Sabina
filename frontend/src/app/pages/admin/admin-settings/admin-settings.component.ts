@@ -86,7 +86,7 @@ import { SettingService } from '../../../services/setting.service';
               <span *ngIf="form.contacto_metodo === 'instagram'" class="badge-active">Activo</span>
             </label>
             <div class="input-with-prefix">
-              <span class="input-prefix">@</span>
+              <span class="input-prefix">&#64;</span>
               <input type="text" [(ngModel)]="form.contacto_instagram" placeholder="Ej: sabinafungi">
             </div>
           </div>
