@@ -1,6 +1,21 @@
 require('dotenv').config();
 const dns = require('dns');
 dns.setDefaultResultOrder('ipv4first');
+
+// Forzar IPv4 en todas las resoluciones DNS (fix para Render que no soporta IPv6)
+const origLookup = dns.lookup;
+dns.lookup = function(hostname, options, callback) {
+  if (typeof options === 'function') {
+    callback = options;
+    options = { family: 4 };
+  } else if (typeof options === 'number') {
+    options = { family: 4 };
+  } else {
+    options = Object.assign({}, options, { family: 4 });
+  }
+  return origLookup.call(this, hostname, options, callback);
+};
+
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
