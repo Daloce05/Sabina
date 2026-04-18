@@ -1,6 +1,6 @@
 require('dotenv').config();
 const { sequelize } = require('../config/database');
-const { User, Category, Product } = require('../models');
+const { User, Category, Product, Setting } = require('../models');
 const bcrypt = require('bcryptjs');
 
 async function initDatabase() {
@@ -44,6 +44,16 @@ async function initDatabase() {
       { nombre: 'Tintura de Reishi 50ml', descripcion: 'Tintura concentrada de reishi para sistema inmunológico.', precio: 45.00, stock: 20, categoryId: categorias[3].id },
       { nombre: 'Paté de Hongos Silvestres', descripcion: 'Paté artesanal elaborado con hongos silvestres selectos.', precio: 18.00, stock: 35, categoryId: categorias[4].id },
       { nombre: 'Risotto de Hongos Kit', descripcion: 'Kit completo para preparar risotto de hongos gourmet en casa.', precio: 14.00, stock: 50, categoryId: categorias[4].id },
+    ]);
+
+    // Crear configuraciones por defecto
+    await Setting.bulkCreate([
+      { clave: 'nombre_empresa', valor: 'Sabina Fungi', descripcion: 'Nombre de la empresa' },
+      { clave: 'contacto_metodo', valor: 'whatsapp', descripcion: 'Método de contacto principal (whatsapp, telefono, email, instagram)' },
+      { clave: 'contacto_whatsapp', valor: '573195631384', descripcion: 'Número de WhatsApp (con código de país)' },
+      { clave: 'contacto_telefono', valor: '', descripcion: 'Número de teléfono' },
+      { clave: 'contacto_email', valor: '', descripcion: 'Correo electrónico de contacto' },
+      { clave: 'contacto_instagram', valor: '', descripcion: 'Usuario de Instagram (sin @)' },
     ]);
 
     console.log('Datos iniciales creados exitosamente.');

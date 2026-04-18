@@ -31,6 +31,9 @@ import { AuthService } from '../../services/auth.service';
           <a routerLink="/admin/usuarios" routerLinkActive="active">
             <span class="nav-icon">👥</span> Usuarios
           </a>
+          <a routerLink="/admin/configuracion" routerLinkActive="active">
+            <span class="nav-icon">⚙️</span> Configuración
+          </a>
           <div class="sidebar-divider"></div>
           <a routerLink="/">
             <span class="nav-icon">🏪</span> Ver Tienda

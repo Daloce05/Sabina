@@ -3,6 +3,7 @@ const Product = require('./Product');
 const Category = require('./Category');
 const Order = require('./Order');
 const OrderItem = require('./OrderItem');
+const Setting = require('./Setting');
 
 // Relaciones
 
@@ -27,5 +28,6 @@ module.exports = {
   Product,
   Category,
   Order,
-  OrderItem
+  OrderItem,
+  Setting
 };

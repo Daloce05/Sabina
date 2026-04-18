@@ -24,6 +24,7 @@ export const routes: Routes = [
       { path: 'categorias', loadComponent: () => import('./pages/admin/admin-categories/admin-categories.component').then(m => m.AdminCategoriesComponent) },
       { path: 'pedidos', loadComponent: () => import('./pages/admin/admin-orders/admin-orders.component').then(m => m.AdminOrdersComponent) },
       { path: 'usuarios', loadComponent: () => import('./pages/admin/admin-users/admin-users.component').then(m => m.AdminUsersComponent) },
+      { path: 'configuracion', loadComponent: () => import('./pages/admin/admin-settings/admin-settings.component').then(m => m.AdminSettingsComponent) },
     ]
   },
   { path: '**', redirectTo: '' }
