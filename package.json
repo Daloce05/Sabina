@@ -1,0 +1,13 @@
+{
+  "name": "sabina-ecommerce",
+  "version": "1.0.0",
+  "description": "Sabina Ecommerce - Hongos y derivados",
+  "scripts": {
+    "start:back": "cd back && node server.js",
+    "start:front": "cd frontend && npx ng serve --port 4200 --open",
+    "dev": "concurrently -k \"npm run start:back\" \"npm run start:front\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
