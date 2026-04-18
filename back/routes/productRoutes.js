@@ -5,14 +5,14 @@ const upload = require('../middleware/upload');
 
 const router = express.Router();
 
-// Rutas públicas
-router.get('/', productController.listar);
-router.get('/:id', productController.obtener);
-
-// Rutas admin
+// Rutas admin (antes de /:id para evitar conflicto)
 router.get('/admin/all', auth, adminOnly, productController.listarAdmin);
 router.post('/', auth, adminOnly, upload.single('imagen'), productController.crear);
 router.put('/:id', auth, adminOnly, upload.single('imagen'), productController.actualizar);
 router.delete('/:id', auth, adminOnly, productController.eliminar);
+
+// Rutas públicas
+router.get('/', productController.listar);
+router.get('/:id', productController.obtener);
 
 module.exports = router;
