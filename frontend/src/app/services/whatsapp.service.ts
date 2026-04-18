@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../models/product.model';
 import { SettingService } from './setting.service';
+import { ContactService } from './contact.service';
 import { SettingsMap } from '../models/setting.model';
 
 @Injectable({
@@ -10,7 +11,10 @@ export class WhatsappService {
   private settings: SettingsMap = {};
   private loaded = false;
 
-  constructor(private settingService: SettingService) {
+  constructor(
+    private settingService: SettingService,
+    private contactService: ContactService
+  ) {
     this.loadSettings();
   }
 
@@ -39,6 +43,14 @@ export class WhatsappService {
 
   sendProductMessage(product: Product, cantidad: number = 1): void {
     const method = this.getMethod();
+
+    // Registrar clic
+    this.contactService.trackClick({
+      metodo: method,
+      tipo: 'producto',
+      productId: product.id,
+      productName: product.nombre
+    }).subscribe();
 
     if (method === 'whatsapp') {
       const phone = this.settings['contacto_whatsapp'] || '573195631384';
@@ -73,6 +85,12 @@ export class WhatsappService {
 
   sendGeneralMessage(): void {
     const method = this.getMethod();
+
+    // Registrar clic
+    this.contactService.trackClick({
+      metodo: method,
+      tipo: 'general'
+    }).subscribe();
 
     if (method === 'whatsapp') {
       const phone = this.settings['contacto_whatsapp'] || '573195631384';
