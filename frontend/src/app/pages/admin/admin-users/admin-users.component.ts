@@ -54,25 +54,25 @@ import { User } from '../../../models/user.model';
   `,
   styles: [`
     .admin-section h1 {
-      color: #eee; margin-bottom: 1.5rem;
+      color: #2d2d3f; margin-bottom: 1.5rem;
       background: linear-gradient(135deg, #b388ff, #ff80ab);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
     .table-container { overflow-x: auto; }
-    table { width: 100%; border-collapse: collapse; }
+    table { width: 100%; border-collapse: collapse; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(179,136,255,0.06); }
     th {
-      background: rgba(179,136,255,0.1); color: #aaa; padding: 0.8rem;
+      background: rgba(179,136,255,0.06); color: #888; padding: 0.8rem;
       text-align: left; font-size: 0.85rem; text-transform: uppercase;
     }
     td {
-      padding: 0.8rem; color: #ccc;
-      border-bottom: 1px solid rgba(179,136,255,0.1); font-size: 0.9rem;
+      padding: 0.8rem; color: #555;
+      border-bottom: 1px solid rgba(179,136,255,0.06); font-size: 0.9rem;
     }
-    tr:hover { background: rgba(179,136,255,0.05); }
-    .badge-admin { background: linear-gradient(135deg, rgba(179,136,255,0.3), rgba(255,128,171,0.3)); color: #ff80ab; padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.8rem; }
-    .badge-cliente { background: rgba(52,152,219,0.15); color: #3498db; padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.8rem; }
-    .badge-yes { color: #2ecc71; background: rgba(46,204,113,0.15); padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.8rem; }
-    .badge-no { color: #e74c3c; background: rgba(231,76,60,0.15); padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.8rem; }
+    tr:hover { background: rgba(179,136,255,0.03); }
+    .badge-admin { background: linear-gradient(135deg, rgba(179,136,255,0.15), rgba(255,128,171,0.15)); color: #9c5cff; padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.8rem; }
+    .badge-cliente { background: rgba(52,152,219,0.1); color: #2980b9; padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.8rem; }
+    .badge-yes { color: #27ae60; background: rgba(46,204,113,0.1); padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.8rem; }
+    .badge-no { color: #c0392b; background: rgba(231,76,60,0.1); padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.8rem; }
     .actions { display: flex; gap: 0.5rem; }
     .btn-toggle, .btn-role {
       background: none; border: none; cursor: pointer; font-size: 1.2rem; padding: 0.3rem;

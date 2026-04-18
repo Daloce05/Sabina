@@ -103,7 +103,7 @@ import { SettingService } from '../../../services/setting.service';
   `,
   styles: [`
     .admin-section h1 {
-      color: #eee;
+      color: #2d2d3f;
       background: linear-gradient(135deg, #b388ff, #ff80ab);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
@@ -111,27 +111,28 @@ import { SettingService } from '../../../services/setting.service';
     .loading { color: #aaa; text-align: center; padding: 3rem; }
     .settings-container { max-width: 700px; }
     .form-card {
-      background: rgba(179,136,255,0.08);
-      border: 1px solid rgba(179,136,255,0.2);
+      background: #ffffff;
+      border: 1px solid rgba(179,136,255,0.12);
       border-radius: 16px; padding: 2rem; margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(179,136,255,0.06);
     }
-    .form-card h3 { color: #eee; margin-bottom: 0.5rem; }
+    .form-card h3 { color: #2d2d3f; margin-bottom: 0.5rem; }
     .hint { color: #888; font-size: 0.85rem; margin-bottom: 1.2rem; }
     .form-group { margin-bottom: 1.2rem; }
-    .form-group label { display: flex; align-items: center; gap: 0.5rem; color: #aaa; margin-bottom: 0.3rem; font-size: 0.9rem; }
+    .form-group label { display: flex; align-items: center; gap: 0.5rem; color: #666; margin-bottom: 0.3rem; font-size: 0.9rem; }
     .form-group input, .form-group textarea {
       width: 100%; padding: 0.65rem 0.8rem;
-      background: rgba(20,10,30,0.8);
-      border: 1px solid rgba(179,136,255,0.3);
-      border-radius: 8px; color: #eee; font-family: inherit;
+      background: #f9f7fc;
+      border: 1px solid rgba(179,136,255,0.2);
+      border-radius: 8px; color: #333; font-family: inherit;
       box-sizing: border-box;
     }
     .form-group input:focus {
       outline: none;
       border-color: #b388ff;
-      box-shadow: 0 0 0 2px rgba(179,136,255,0.2);
+      box-shadow: 0 0 0 2px rgba(179,136,255,0.12);
     }
-    .field-hint { color: #666; font-size: 0.8rem; margin-top: 0.3rem; display: block; }
+    .field-hint { color: #999; font-size: 0.8rem; margin-top: 0.3rem; display: block; }
 
     .contact-methods {
       display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
@@ -139,22 +140,22 @@ import { SettingService } from '../../../services/setting.service';
     .method-option {
       display: flex; align-items: center; gap: 0.8rem;
       padding: 1rem 1.2rem;
-      background: rgba(20,10,30,0.6);
-      border: 2px solid rgba(179,136,255,0.15);
+      background: #f9f7fc;
+      border: 2px solid rgba(179,136,255,0.12);
       border-radius: 12px; cursor: pointer;
       transition: all 0.3s;
     }
     .method-option:hover {
-      border-color: rgba(179,136,255,0.4);
-      background: rgba(179,136,255,0.08);
+      border-color: rgba(179,136,255,0.3);
+      background: rgba(179,136,255,0.04);
     }
     .method-option.selected {
       border-color: #b388ff;
-      background: rgba(179,136,255,0.15);
-      box-shadow: 0 0 15px rgba(179,136,255,0.2);
+      background: rgba(179,136,255,0.08);
+      box-shadow: 0 0 12px rgba(179,136,255,0.1);
     }
     .method-icon { font-size: 1.5rem; }
-    .method-label { color: #eee; font-weight: 600; font-size: 0.95rem; }
+    .method-label { color: #2d2d3f; font-weight: 600; font-size: 0.95rem; }
 
     .badge-active {
       background: linear-gradient(135deg, #b388ff, #ff80ab);
@@ -167,16 +168,16 @@ import { SettingService } from '../../../services/setting.service';
 
     .input-with-prefix {
       display: flex; align-items: center;
-      background: rgba(20,10,30,0.8);
-      border: 1px solid rgba(179,136,255,0.3);
+      background: #f9f7fc;
+      border: 1px solid rgba(179,136,255,0.2);
       border-radius: 8px;
       overflow: hidden;
     }
     .input-prefix {
       padding: 0.65rem 0.8rem;
       color: #888;
-      background: rgba(179,136,255,0.1);
-      border-right: 1px solid rgba(179,136,255,0.3);
+      background: rgba(179,136,255,0.06);
+      border-right: 1px solid rgba(179,136,255,0.15);
       font-size: 0.9rem;
     }
     .input-with-prefix input {
@@ -185,8 +186,8 @@ import { SettingService } from '../../../services/setting.service';
       background: transparent !important;
     }
 
-    .error { color: #e74c3c; margin-bottom: 1rem; padding: 0.8rem; background: rgba(231,76,60,0.1); border-radius: 8px; }
-    .success { color: #2ecc71; margin-bottom: 1rem; padding: 0.8rem; background: rgba(46,204,113,0.1); border-radius: 8px; }
+    .error { color: #e74c3c; margin-bottom: 1rem; padding: 0.8rem; background: rgba(231,76,60,0.08); border-radius: 8px; }
+    .success { color: #2ecc71; margin-bottom: 1rem; padding: 0.8rem; background: rgba(46,204,113,0.08); border-radius: 8px; }
 
     .btn-save {
       padding: 0.8rem 2.5rem;
@@ -195,7 +196,7 @@ import { SettingService } from '../../../services/setting.service';
       font-weight: 600; font-size: 1rem;
       transition: all 0.3s;
     }
-    .btn-save:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(179,136,255,0.3); }
+    .btn-save:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(179,136,255,0.15); }
     .btn-save:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
   `]
 })
@@ -206,7 +207,7 @@ export class AdminSettingsComponent implements OnInit {
   successMsg = '';
 
   form = {
-    nombre_empresa: 'Sabina Fungi',
+    nombre_empresa: 'Sabina Medicina',
     contacto_metodo: 'whatsapp',
     contacto_whatsapp: '',
     contacto_telefono: '',

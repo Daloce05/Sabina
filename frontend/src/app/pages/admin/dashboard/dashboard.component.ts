@@ -11,7 +11,7 @@ import { UserService } from '../../../services/user.service';
   imports: [CommonModule, RouterLink],
   template: `
     <div class="dashboard">
-      <h1>Dashboard — Sabina Fungi</h1>
+      <h1>Dashboard — Sabina Medicina</h1>
 
       <div class="stats-grid">
         <div class="stat-card highlight">
@@ -123,7 +123,7 @@ import { UserService } from '../../../services/user.service';
   `,
   styles: [`
     .dashboard h1 {
-      color: #eee; margin-bottom: 2rem;
+      color: #2d2d3f; margin-bottom: 2rem;
       background: linear-gradient(135deg, #b388ff, #ff80ab);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -134,37 +134,39 @@ import { UserService } from '../../../services/user.service';
       gap: 1.2rem; margin-bottom: 2rem;
     }
     .stat-card {
-      background: rgba(179, 136, 255, 0.08);
-      border: 1px solid rgba(179, 136, 255, 0.2);
+      background: #ffffff;
+      border: 1px solid rgba(179, 136, 255, 0.1);
       border-radius: 16px; padding: 1.3rem;
       display: flex; align-items: center; gap: 1rem;
+      box-shadow: 0 2px 8px rgba(179, 136, 255, 0.06);
     }
     .stat-card.highlight {
-      background: rgba(179, 136, 255, 0.15);
-      border-color: rgba(179, 136, 255, 0.4);
+      background: rgba(179, 136, 255, 0.06);
+      border-color: rgba(179, 136, 255, 0.2);
     }
     .stat-icon { font-size: 2rem; }
-    .stat-value { display: block; font-size: 1.5rem; font-weight: 700; color: #eee; }
+    .stat-value { display: block; font-size: 1.5rem; font-weight: 700; color: #2d2d3f; }
     .stat-label { color: #888; font-size: 0.8rem; }
 
     .section-row {
       display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;
     }
     .section-card {
-      background: rgba(179, 136, 255, 0.08);
-      border: 1px solid rgba(179, 136, 255, 0.2);
+      background: #ffffff;
+      border: 1px solid rgba(179, 136, 255, 0.1);
       border-radius: 16px; padding: 1.5rem; margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(179, 136, 255, 0.06);
     }
-    .section-card h2 { color: #eee; font-size: 1.1rem; margin-bottom: 1.2rem; }
-    .empty { color: #666; font-size: 0.9rem; text-align: center; padding: 1rem; }
+    .section-card h2 { color: #2d2d3f; font-size: 1.1rem; margin-bottom: 1.2rem; }
+    .empty { color: #aaa; font-size: 0.9rem; text-align: center; padding: 1rem; }
 
     .method-list { display: flex; flex-direction: column; gap: 0.8rem; }
     .method-item { display: flex; align-items: center; gap: 0.8rem; }
     .method-info { display: flex; align-items: center; gap: 0.5rem; min-width: 110px; }
     .method-icon { font-size: 1.2rem; }
-    .method-name { color: #ccc; font-size: 0.9rem; }
+    .method-name { color: #555; font-size: 0.9rem; }
     .method-bar-container {
-      flex: 1; height: 8px; background: rgba(179, 136, 255, 0.1);
+      flex: 1; height: 8px; background: rgba(179, 136, 255, 0.08);
       border-radius: 4px; overflow: hidden;
     }
     .method-bar {
@@ -172,13 +174,13 @@ import { UserService } from '../../../services/user.service';
       background: linear-gradient(90deg, #b388ff, #ff80ab);
       border-radius: 4px; min-width: 4px;
     }
-    .method-count { color: #eee; font-weight: 600; font-size: 0.9rem; min-width: 30px; text-align: right; }
+    .method-count { color: #2d2d3f; font-weight: 600; font-size: 0.9rem; min-width: 30px; text-align: right; }
 
     .product-list { display: flex; flex-direction: column; gap: 0.6rem; }
     .product-item {
       display: flex; align-items: center; gap: 0.8rem;
       padding: 0.5rem 0.8rem;
-      background: rgba(179, 136, 255, 0.05);
+      background: rgba(179, 136, 255, 0.04);
       border-radius: 8px;
     }
     .product-rank {
@@ -187,7 +189,7 @@ import { UserService } from '../../../services/user.service';
       display: flex; align-items: center; justify-content: center;
       color: white; font-size: 0.75rem; font-weight: 700; flex-shrink: 0;
     }
-    .product-name { flex: 1; color: #ccc; font-size: 0.9rem; }
+    .product-name { flex: 1; color: #555; font-size: 0.9rem; }
     .product-count { color: #888; font-size: 0.8rem; white-space: nowrap; }
 
     .days-grid {
@@ -203,28 +205,29 @@ import { UserService } from '../../../services/user.service';
       background: linear-gradient(180deg, #b388ff, #ff80ab);
       border-radius: 4px 4px 0 0;
     }
-    .day-count { color: #eee; font-size: 0.8rem; font-weight: 600; margin-top: 0.3rem; }
-    .day-label { color: #666; font-size: 0.7rem; margin-top: 0.2rem; }
+    .day-count { color: #2d2d3f; font-size: 0.8rem; font-weight: 600; margin-top: 0.3rem; }
+    .day-label { color: #999; font-size: 0.7rem; margin-top: 0.2rem; }
 
-    .quick-actions h2 { color: #eee; margin-bottom: 1rem; }
+    .quick-actions h2 { color: #2d2d3f; margin-bottom: 1rem; }
     .actions-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
       gap: 1rem;
     }
     .action-card {
-      background: rgba(179, 136, 255, 0.08);
-      border: 1px solid rgba(179, 136, 255, 0.2);
+      background: #ffffff;
+      border: 1px solid rgba(179, 136, 255, 0.1);
       border-radius: 12px; padding: 1.3rem;
-      color: #ddd; text-decoration: none;
+      color: #555; text-decoration: none;
       text-align: center; font-size: 0.95rem;
       transition: all 0.3s;
+      box-shadow: 0 2px 6px rgba(179, 136, 255, 0.06);
     }
     .action-card span { display: block; font-size: 1.8rem; margin-bottom: 0.4rem; }
     .action-card:hover {
-      border-color: #ff80ab;
+      border-color: #b388ff;
       transform: translateY(-3px);
-      box-shadow: 0 5px 20px rgba(179, 136, 255, 0.2);
+      box-shadow: 0 5px 20px rgba(179, 136, 255, 0.12);
     }
 
     @media (max-width: 768px) {

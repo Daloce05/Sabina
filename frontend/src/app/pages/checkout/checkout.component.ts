@@ -76,24 +76,26 @@ import { AuthService } from '../../services/auth.service';
     }
     .checkout-grid { display: grid; grid-template-columns: 1fr 350px; gap: 2rem; }
     .checkout-form {
-      background: rgba(179, 136, 255, 0.08);
-      border: 1px solid rgba(179, 136, 255, 0.2);
+      background: #ffffff;
+      border: 1px solid rgba(179, 136, 255, 0.12);
       border-radius: 16px; padding: 2rem;
+      box-shadow: 0 2px 8px rgba(179, 136, 255, 0.06);
     }
-    .checkout-form h3 { color: #eee; margin-bottom: 1.5rem; }
+    .checkout-form h3 { color: #2d2d3f; margin-bottom: 1.5rem; }
     .form-group { margin-bottom: 1.2rem; }
     .form-group label {
-      display: block; color: #aaa; margin-bottom: 0.4rem; font-size: 0.9rem;
+      display: block; color: #666; margin-bottom: 0.4rem; font-size: 0.9rem;
     }
     .form-group input, .form-group textarea {
       width: 100%; padding: 0.7rem 1rem;
-      background: rgba(15, 15, 30, 0.8);
-      border: 1px solid rgba(179, 136, 255, 0.3);
-      border-radius: 8px; color: #eee; font-size: 0.95rem;
+      background: #f9f7fc;
+      border: 1px solid rgba(179, 136, 255, 0.2);
+      border-radius: 8px; color: #333; font-size: 0.95rem;
       font-family: inherit; resize: vertical;
     }
-    .error { color: #e74c3c; margin-bottom: 1rem; padding: 0.7rem; background: rgba(231,76,60,0.1); border-radius: 8px; }
-    .success { color: #2ecc71; margin-bottom: 1rem; padding: 0.7rem; background: rgba(46,204,113,0.1); border-radius: 8px; }
+    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #b388ff; }
+    .error { color: #e74c3c; margin-bottom: 1rem; padding: 0.7rem; background: rgba(231,76,60,0.08); border-radius: 8px; }
+    .success { color: #2ecc71; margin-bottom: 1rem; padding: 0.7rem; background: rgba(46,204,113,0.08); border-radius: 8px; }
     .btn-order {
       width: 100%; padding: 0.9rem;
       background: linear-gradient(135deg, #b388ff, #ff80ab);
@@ -103,20 +105,21 @@ import { AuthService } from '../../services/auth.service';
     }
     .btn-order:disabled { opacity: 0.5; cursor: not-allowed; }
     .order-summary {
-      background: rgba(179, 136, 255, 0.08);
-      border: 1px solid rgba(179, 136, 255, 0.2);
+      background: #ffffff;
+      border: 1px solid rgba(179, 136, 255, 0.12);
       border-radius: 16px; padding: 1.5rem;
       height: fit-content; position: sticky; top: 90px;
+      box-shadow: 0 2px 8px rgba(179, 136, 255, 0.06);
     }
-    .order-summary h3 { color: #eee; margin-bottom: 1rem; }
+    .order-summary h3 { color: #2d2d3f; margin-bottom: 1rem; }
     .summary-item {
       display: flex; justify-content: space-between;
-      padding: 0.6rem 0; color: #aaa; font-size: 0.9rem;
-      border-bottom: 1px solid rgba(179, 136, 255, 0.1);
+      padding: 0.6rem 0; color: #666; font-size: 0.9rem;
+      border-bottom: 1px solid rgba(179, 136, 255, 0.08);
     }
     .summary-total {
       display: flex; justify-content: space-between;
-      padding: 1rem 0 0; color: #eee; font-size: 1.2rem; font-weight: 700;
+      padding: 1rem 0 0; color: #2d2d3f; font-size: 1.2rem; font-weight: 700;
     }
   `]
 })

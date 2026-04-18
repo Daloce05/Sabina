@@ -81,12 +81,13 @@ import { WhatsappService } from '../../services/whatsapp.service';
   `,
   styles: [`
     .navbar {
-      background: rgba(15, 15, 30, 0.95);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(179, 136, 255, 0.3);
+      border-bottom: 1px solid rgba(179, 136, 255, 0.15);
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 1px 8px rgba(179, 136, 255, 0.08);
     }
     .nav-container {
       max-width: 1200px;
@@ -116,13 +117,13 @@ import { WhatsappService } from '../../services/whatsapp.service';
       gap: 2rem;
     }
     .nav-links a {
-      color: #ccc;
+      color: #555;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s;
     }
     .nav-links a:hover, .nav-links a.active {
-      color: #ff80ab;
+      color: #9c5cff;
     }
     .nav-actions {
       display: flex;
@@ -142,7 +143,7 @@ import { WhatsappService } from '../../services/whatsapp.service';
       padding: 0.5rem 1.2rem;
       border: 1px solid #b388ff;
       border-radius: 25px;
-      color: #b388ff;
+      color: #9c5cff;
       text-decoration: none;
       font-size: 0.9rem;
       transition: all 0.3s;
@@ -177,25 +178,25 @@ import { WhatsappService } from '../../services/whatsapp.service';
       position: absolute;
       top: 50px;
       right: 0;
-      background: #14142a;
-      border: 1px solid rgba(179, 136, 255, 0.3);
+      background: #ffffff;
+      border: 1px solid rgba(179, 136, 255, 0.2);
       border-radius: 12px;
       padding: 0.5rem 0;
       min-width: 200px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
     .dropdown-name {
       display: block;
       padding: 0.7rem 1rem;
-      color: #ff80ab;
+      color: #9c5cff;
       font-weight: 600;
-      border-bottom: 1px solid rgba(179, 136, 255, 0.2);
+      border-bottom: 1px solid rgba(179, 136, 255, 0.12);
     }
     .dropdown a, .dropdown button {
       display: block;
       width: 100%;
       padding: 0.7rem 1rem;
-      color: #ccc;
+      color: #555;
       text-decoration: none;
       text-align: left;
       background: none;
@@ -204,13 +205,13 @@ import { WhatsappService } from '../../services/whatsapp.service';
       font-size: 0.9rem;
     }
     .dropdown a:hover, .dropdown button:hover {
-      background: rgba(179, 136, 255, 0.1);
-      color: #ff80ab;
+      background: rgba(179, 136, 255, 0.08);
+      color: #9c5cff;
     }
     .main-content { min-height: calc(100vh - 70px - 300px); }
     .footer {
-      background: #0a0a14;
-      border-top: 1px solid rgba(179, 136, 255, 0.2);
+      background: #f0ecf5;
+      border-top: 1px solid rgba(179, 136, 255, 0.12);
       padding: 3rem 0 1.5rem;
     }
     .footer-container {
@@ -234,22 +235,22 @@ import { WhatsappService } from '../../services/whatsapp.service';
       -webkit-text-fill-color: transparent;
     }
     .footer-grid h4 {
-      color: #ff80ab;
+      color: #9c5cff;
       margin-bottom: 0.8rem;
     }
-    .footer-grid p { color: #888; line-height: 1.6; }
+    .footer-grid p { color: #777; line-height: 1.6; }
     .footer-grid a {
       display: block;
-      color: #888;
+      color: #777;
       text-decoration: none;
       margin-bottom: 0.4rem;
     }
-    .footer-grid a:hover { color: #ff80ab; }
+    .footer-grid a:hover { color: #9c5cff; }
     .footer-bottom {
-      border-top: 1px solid rgba(179, 136, 255, 0.15);
+      border-top: 1px solid rgba(179, 136, 255, 0.12);
       padding-top: 1.5rem;
       text-align: center;
-      color: #666;
+      color: #999;
       font-size: 0.85rem;
     }
   `]

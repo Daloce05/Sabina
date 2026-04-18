@@ -48,7 +48,7 @@ async function initDatabase() {
 
     // Crear configuraciones por defecto
     await Setting.bulkCreate([
-      { clave: 'nombre_empresa', valor: 'Sabina Fungi', descripcion: 'Nombre de la empresa' },
+      { clave: 'nombre_empresa', valor: 'Sabina Medicina', descripcion: 'Nombre de la empresa' },
       { clave: 'contacto_metodo', valor: 'whatsapp', descripcion: 'Método de contacto principal (whatsapp, telefono, email, instagram)' },
       { clave: 'contacto_whatsapp', valor: '573195631384', descripcion: 'Número de WhatsApp (con código de país)' },
       { clave: 'contacto_telefono', valor: '', descripcion: 'Número de teléfono' },

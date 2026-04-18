@@ -48,36 +48,37 @@ import { Order } from '../../models/order.model';
     }
     .empty { text-align: center; padding: 3rem; color: #888; font-size: 1.2rem; }
     .order-card {
-      background: rgba(179, 136, 255, 0.08);
-      border: 1px solid rgba(179, 136, 255, 0.2);
+      background: #ffffff;
+      border: 1px solid rgba(179, 136, 255, 0.12);
       border-radius: 16px; margin-bottom: 1.5rem; overflow: hidden;
+      box-shadow: 0 2px 8px rgba(179, 136, 255, 0.06);
     }
     .order-header {
       display: flex; justify-content: space-between; align-items: center;
       padding: 1rem 1.5rem;
-      background: rgba(179, 136, 255, 0.05);
-      border-bottom: 1px solid rgba(179, 136, 255, 0.1);
+      background: rgba(179, 136, 255, 0.04);
+      border-bottom: 1px solid rgba(179, 136, 255, 0.08);
     }
-    .order-id { color: #eee; font-weight: 600; margin-right: 1rem; }
+    .order-id { color: #2d2d3f; font-weight: 600; margin-right: 1rem; }
     .order-date { color: #888; font-size: 0.85rem; }
     .status {
       padding: 0.3rem 0.8rem; border-radius: 20px;
       font-size: 0.8rem; font-weight: 600;
     }
-    .status-pendiente { background: rgba(243,156,18,0.2); color: #f39c12; }
-    .status-confirmado { background: rgba(52,152,219,0.2); color: #3498db; }
-    .status-enviado { background: rgba(179,136,255,0.2); color: #b388ff; }
-    .status-entregado { background: rgba(46,204,113,0.2); color: #2ecc71; }
-    .status-cancelado { background: rgba(231,76,60,0.2); color: #e74c3c; }
+    .status-pendiente { background: rgba(243,156,18,0.12); color: #e67e22; }
+    .status-confirmado { background: rgba(52,152,219,0.12); color: #2980b9; }
+    .status-enviado { background: rgba(179,136,255,0.12); color: #9c5cff; }
+    .status-entregado { background: rgba(46,204,113,0.12); color: #27ae60; }
+    .status-cancelado { background: rgba(231,76,60,0.12); color: #c0392b; }
     .order-items { padding: 1rem 1.5rem; }
     .order-item {
       display: flex; justify-content: space-between;
-      padding: 0.5rem 0; color: #aaa; font-size: 0.9rem;
+      padding: 0.5rem 0; color: #666; font-size: 0.9rem;
       border-bottom: 1px solid rgba(179, 136, 255, 0.05);
     }
     .order-footer {
       padding: 1rem 1.5rem; text-align: right;
-      border-top: 1px solid rgba(179, 136, 255, 0.1);
+      border-top: 1px solid rgba(179, 136, 255, 0.08);
     }
     .order-total { color: #ff80ab; font-size: 1.1rem; font-weight: 700; }
   `]

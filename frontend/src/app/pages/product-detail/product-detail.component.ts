@@ -45,14 +45,14 @@ import { Product } from '../../models/product.model';
     .detail-page { padding: 2rem 1.5rem; }
     .container { max-width: 1000px; margin: 0 auto; }
     .back-link {
-      color: #b388ff; text-decoration: none; font-size: 0.95rem;
+      color: #9c5cff; text-decoration: none; font-size: 0.95rem;
       display: inline-block; margin-bottom: 2rem;
     }
     .back-link:hover { color: #ff80ab; }
     .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
     .detail-img {
       border-radius: 16px; overflow: hidden;
-      background: linear-gradient(135deg, rgba(179, 136, 255, 0.2), rgba(255, 128, 171, 0.1));
+      background: linear-gradient(135deg, rgba(179, 136, 255, 0.08), rgba(255, 128, 171, 0.05));
       display: flex; align-items: center; justify-content: center; min-height: 400px;
     }
     .detail-img img { width: 100%; height: 100%; object-fit: cover; }
@@ -61,14 +61,14 @@ import { Product } from '../../models/product.model';
       color: #ff80ab; font-size: 0.85rem; font-weight: 600;
       text-transform: uppercase; letter-spacing: 1px;
     }
-    .detail-info h1 { color: #eee; font-size: 1.8rem; margin: 0.5rem 0; }
+    .detail-info h1 { color: #2d2d3f; font-size: 1.8rem; margin: 0.5rem 0; }
     .price {
       font-size: 2rem; font-weight: 700; margin: 0.5rem 0;
       background: linear-gradient(135deg, #b388ff, #ff80ab);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .description { color: #aaa; line-height: 1.7; margin: 1rem 0; }
+    .description { color: #666; line-height: 1.7; margin: 1rem 0; }
     .stock-info { margin: 1rem 0; }
     .in-stock { color: #2ecc71; }
     .out-stock { color: #e74c3c; }
@@ -78,12 +78,13 @@ import { Product } from '../../models/product.model';
     .qty-btn {
       width: 40px; height: 40px;
       border-radius: 50%;
-      border: 1px solid rgba(179, 136, 255, 0.3);
-      background: rgba(179, 136, 255, 0.1);
-      color: #eee; font-size: 1.2rem;
+      border: 1px solid rgba(179, 136, 255, 0.2);
+      background: rgba(179, 136, 255, 0.06);
+      color: #555; font-size: 1.2rem;
       cursor: pointer;
     }
-    .qty { color: #eee; font-size: 1.2rem; font-weight: 600; min-width: 30px; text-align: center; }
+    .qty-btn:hover { background: rgba(179, 136, 255, 0.12); }
+    .qty { color: #333; font-size: 1.2rem; font-weight: 600; min-width: 30px; text-align: center; }
     .btn-add-lg {
       width: 100%; padding: 1rem;
       background: linear-gradient(135deg, #b388ff, #ff80ab);

@@ -8,7 +8,7 @@ const Navbar = () => {
       <AuthButtons />
      <nav className="navbar bg-base-100 shadow-sm lg:rounded-box w-full">
         <div className="navbar-start">     
-            <a className="btn btn-ghost text-xl" to="/"> SABINA FUNGI</a>
+            <a className="btn btn-ghost text-xl" to="/"> SABINA MEDICINA</a>
         </div>
        
         <div className="navbar-end gap-3">

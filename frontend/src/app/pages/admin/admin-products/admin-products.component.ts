@@ -104,7 +104,7 @@ import { Category } from '../../../models/category.model';
   `,
   styles: [`
     .admin-section h1 {
-      color: #eee;
+      color: #2d2d3f;
       background: linear-gradient(135deg, #b388ff, #ff80ab);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -119,26 +119,28 @@ import { Category } from '../../../models/category.model';
       color: white; cursor: pointer; font-weight: 600;
     }
     .form-card {
-      background: rgba(179, 136, 255, 0.08);
-      border: 1px solid rgba(179, 136, 255, 0.2);
+      background: #ffffff;
+      border: 1px solid rgba(179, 136, 255, 0.12);
       border-radius: 16px; padding: 2rem; margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(179, 136, 255, 0.06);
     }
-    .form-card h3 { color: #eee; margin-bottom: 1.5rem; }
+    .form-card h3 { color: #2d2d3f; margin-bottom: 1.5rem; }
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .form-row { display: flex; gap: 1rem; align-items: end; }
     .form-group { margin-bottom: 1rem; }
-    .form-group label { display: block; color: #aaa; margin-bottom: 0.3rem; font-size: 0.9rem; }
+    .form-group label { display: block; color: #666; margin-bottom: 0.3rem; font-size: 0.9rem; }
     .form-group input, .form-group textarea, .form-group select {
       width: 100%; padding: 0.65rem 0.8rem;
-      background: rgba(15, 15, 30, 0.8);
-      border: 1px solid rgba(179, 136, 255, 0.3);
-      border-radius: 8px; color: #eee; font-family: inherit;
+      background: #f9f7fc;
+      border: 1px solid rgba(179, 136, 255, 0.2);
+      border-radius: 8px; color: #333; font-family: inherit;
     }
-    .form-group select option { background: #14142a; }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: #b388ff; }
+    .form-group select option { background: #ffffff; }
     .checkbox-label {
-      display: flex !important; align-items: center; gap: 0.5rem; cursor: pointer; color: #aaa !important;
+      display: flex !important; align-items: center; gap: 0.5rem; cursor: pointer; color: #666 !important;
     }
-    .error { color: #e74c3c; margin-bottom: 1rem; padding: 0.5rem; background: rgba(231,76,60,0.1); border-radius: 6px; }
+    .error { color: #e74c3c; margin-bottom: 1rem; padding: 0.5rem; background: rgba(231,76,60,0.08); border-radius: 6px; }
     .btn-save {
       padding: 0.7rem 2rem;
       background: linear-gradient(135deg, #b388ff, #ff80ab);
@@ -148,25 +150,27 @@ import { Category } from '../../../models/category.model';
     .search-bar { margin-bottom: 1.5rem; }
     .search-bar input {
       width: 100%; max-width: 400px; padding: 0.65rem 1rem;
-      background: rgba(179, 136, 255, 0.08);
-      border: 1px solid rgba(179, 136, 255, 0.3);
-      border-radius: 10px; color: #eee;
+      background: #ffffff;
+      border: 1px solid rgba(179, 136, 255, 0.2);
+      border-radius: 10px; color: #333;
+      box-shadow: 0 1px 4px rgba(179, 136, 255, 0.06);
     }
-    .search-bar input::placeholder { color: #888; }
+    .search-bar input:focus { outline: none; border-color: #b388ff; }
+    .search-bar input::placeholder { color: #aaa; }
     .table-container { overflow-x: auto; }
-    table { width: 100%; border-collapse: collapse; }
+    table { width: 100%; border-collapse: collapse; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(179, 136, 255, 0.06); }
     th {
-      background: rgba(179, 136, 255, 0.1);
-      color: #aaa; padding: 0.8rem; text-align: left; font-size: 0.85rem;
+      background: rgba(179, 136, 255, 0.06);
+      color: #888; padding: 0.8rem; text-align: left; font-size: 0.85rem;
       text-transform: uppercase; letter-spacing: 0.5px;
     }
     td {
-      padding: 0.8rem; color: #ccc; border-bottom: 1px solid rgba(179, 136, 255, 0.1);
+      padding: 0.8rem; color: #555; border-bottom: 1px solid rgba(179, 136, 255, 0.06);
       font-size: 0.9rem;
     }
-    tr:hover { background: rgba(179, 136, 255, 0.05); }
-    .badge-yes { color: #2ecc71; background: rgba(46,204,113,0.15); padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.8rem; }
-    .badge-no { color: #e74c3c; background: rgba(231,76,60,0.15); padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.8rem; }
+    tr:hover { background: rgba(179, 136, 255, 0.03); }
+    .badge-yes { color: #27ae60; background: rgba(46,204,113,0.1); padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.8rem; }
+    .badge-no { color: #c0392b; background: rgba(231,76,60,0.1); padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.8rem; }
     .actions { display: flex; gap: 0.5rem; }
     .btn-edit, .btn-delete {
       background: none; border: none; cursor: pointer; font-size: 1.1rem; padding: 0.3rem;

@@ -66,20 +66,21 @@ import { AuthService } from '../../services/auth.service';
     }
     .sidebar {
       width: 260px;
-      background: linear-gradient(180deg, #14142a 0%, #0a0a14 100%);
-      border-right: 1px solid rgba(179, 136, 255, 0.2);
+      background: #ffffff;
+      border-right: 1px solid rgba(179, 136, 255, 0.12);
       position: fixed;
       top: 0;
       left: 0;
       bottom: 0;
       overflow-y: auto;
+      box-shadow: 2px 0 10px rgba(179, 136, 255, 0.06);
     }
     .sidebar-header {
       padding: 1.5rem;
       display: flex;
       align-items: center;
       gap: 0.7rem;
-      border-bottom: 1px solid rgba(179, 136, 255, 0.2);
+      border-bottom: 1px solid rgba(179, 136, 255, 0.12);
     }
     .logo-img { height: 36px; width: auto; border-radius: 50%; }
     .logo-text {
@@ -97,7 +98,7 @@ import { AuthService } from '../../services/auth.service';
       align-items: center;
       gap: 0.8rem;
       padding: 0.8rem 1.5rem;
-      color: #aaa;
+      color: #666;
       text-decoration: none;
       font-size: 0.95rem;
       transition: all 0.3s;
@@ -108,38 +109,39 @@ import { AuthService } from '../../services/auth.service';
       cursor: pointer;
     }
     .sidebar-nav a:hover, .sidebar-nav a.active, .logout-btn:hover {
-      color: white;
-      background: rgba(179, 136, 255, 0.15);
+      color: #9c5cff;
+      background: rgba(179, 136, 255, 0.08);
       border-right: 3px solid #ff80ab;
     }
     .sidebar-divider {
       height: 1px;
-      background: rgba(179, 136, 255, 0.15);
+      background: rgba(179, 136, 255, 0.1);
       margin: 0.8rem 1.5rem;
     }
     .nav-icon { font-size: 1.1rem; }
     .admin-main {
       flex: 1;
       margin-left: 260px;
-      background: #0a0a14;
+      background: #f9f7fc;
     }
     .admin-header {
-      background: rgba(15, 15, 30, 0.95);
-      border-bottom: 1px solid rgba(179, 136, 255, 0.2);
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid rgba(179, 136, 255, 0.12);
       padding: 1rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      box-shadow: 0 1px 4px rgba(179, 136, 255, 0.06);
     }
     .admin-header h2 {
       font-size: 1.2rem;
-      color: #ddd;
+      color: #444;
     }
     .admin-user {
       display: flex;
       align-items: center;
       gap: 0.8rem;
-      color: #aaa;
+      color: #666;
       font-size: 0.9rem;
     }
     .user-avatar {

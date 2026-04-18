@@ -43,35 +43,36 @@ import { AuthService } from '../../services/auth.service';
       min-height: calc(100vh - 70px);
       display: flex; align-items: center; justify-content: center;
       padding: 2rem;
-      background: linear-gradient(135deg, rgba(179, 136, 255, 0.08), rgba(255, 128, 171, 0.05));
+      background: linear-gradient(135deg, rgba(179, 136, 255, 0.06), rgba(255, 128, 171, 0.03));
     }
     .auth-card {
       width: 100%; max-width: 420px;
-      background: rgba(15, 15, 30, 0.9);
-      border: 1px solid rgba(179, 136, 255, 0.3);
+      background: #ffffff;
+      border: 1px solid rgba(179, 136, 255, 0.15);
       border-radius: 20px; padding: 2.5rem;
+      box-shadow: 0 4px 20px rgba(179, 136, 255, 0.08);
     }
     .auth-header { text-align: center; margin-bottom: 2rem; }
     .logo { font-size: 3rem; display: block; margin-bottom: 0.5rem; }
     .auth-header h2 {
-      color: #eee; font-size: 1.5rem; margin-bottom: 0.3rem;
+      color: #2d2d3f; font-size: 1.5rem; margin-bottom: 0.3rem;
     }
     .auth-header p { color: #888; font-size: 0.9rem; }
     .form-group { margin-bottom: 1.2rem; }
-    .form-group label { display: block; color: #aaa; margin-bottom: 0.4rem; font-size: 0.9rem; }
+    .form-group label { display: block; color: #666; margin-bottom: 0.4rem; font-size: 0.9rem; }
     .form-group input {
       width: 100%; padding: 0.75rem 1rem;
-      background: rgba(179, 136, 255, 0.08);
-      border: 1px solid rgba(179, 136, 255, 0.3);
-      border-radius: 10px; color: #eee; font-size: 0.95rem;
+      background: #f9f7fc;
+      border: 1px solid rgba(179, 136, 255, 0.2);
+      border-radius: 10px; color: #333; font-size: 0.95rem;
     }
-    .form-group input::placeholder { color: #666; }
+    .form-group input::placeholder { color: #aaa; }
     .form-group input:focus {
-      outline: none; border-color: #ff80ab;
+      outline: none; border-color: #b388ff;
     }
     .error {
       color: #e74c3c; margin-bottom: 1rem; padding: 0.7rem;
-      background: rgba(231,76,60,0.1); border-radius: 8px; font-size: 0.9rem;
+      background: rgba(231,76,60,0.08); border-radius: 8px; font-size: 0.9rem;
     }
     .btn-submit {
       width: 100%; padding: 0.85rem;
@@ -85,7 +86,7 @@ import { AuthService } from '../../services/auth.service';
     .auth-footer {
       text-align: center; margin-top: 1.5rem; color: #888; font-size: 0.9rem;
     }
-    .auth-footer a { color: #ff80ab; text-decoration: none; }
+    .auth-footer a { color: #9c5cff; text-decoration: none; }
   `]
 })
 export class LoginComponent {
