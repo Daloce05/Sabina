@@ -50,7 +50,7 @@ import { Category } from '../../models/category.model';
         <div class="products-grid">
           <div *ngFor="let product of featuredProducts" class="product-card">
             <div class="product-img">
-              <img *ngIf="product.imagen" [src]="'http://localhost:3000' + product.imagen" [alt]="product.nombre">
+              <img *ngIf="product.imagen" [src]="'https://sabina-utf1.onrender.com' + product.imagen" [alt]="product.nombre">
               <div *ngIf="!product.imagen" class="product-placeholder">🍄</div>
               <span class="product-badge" *ngIf="product.destacado">Destacado</span>
             </div>
@@ -106,7 +106,7 @@ import { Category } from '../../models/category.model';
       padding: 6rem 1.5rem;
       text-align: center;
       overflow: hidden;
-      background: linear-gradient(135deg, rgba(155, 89, 182, 0.15) 0%, rgba(232, 67, 147, 0.1) 100%);
+      background: linear-gradient(135deg, rgba(179, 136, 255, 0.15) 0%, rgba(255, 128, 171, 0.1) 100%);
     }
     .hero-content {
       position: relative;
@@ -122,7 +122,7 @@ import { Category } from '../../models/category.model';
       line-height: 1.2;
     }
     .highlight {
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -138,7 +138,7 @@ import { Category } from '../../models/category.model';
     }
     .btn-primary-lg {
       padding: 0.8rem 2rem;
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       border-radius: 30px;
       color: white;
       text-decoration: none;
@@ -147,19 +147,19 @@ import { Category } from '../../models/category.model';
     }
     .btn-primary-lg:hover {
       transform: translateY(-2px);
-      box-shadow: 0 5px 20px rgba(155, 89, 182, 0.4);
+      box-shadow: 0 5px 20px rgba(179, 136, 255, 0.4);
     }
     .btn-outline-lg {
       padding: 0.8rem 2rem;
-      border: 2px solid #9b59b6;
+      border: 2px solid #b388ff;
       border-radius: 30px;
-      color: #9b59b6;
+      color: #b388ff;
       text-decoration: none;
       font-weight: 600;
       transition: all 0.3s;
     }
     .btn-outline-lg:hover {
-      background: #9b59b6;
+      background: #b388ff;
       color: white;
     }
     .hero-decoration {
@@ -172,15 +172,15 @@ import { Category } from '../../models/category.model';
       border-radius: 50%;
       opacity: 0.1;
     }
-    .c1 { width: 400px; height: 400px; background: #9b59b6; top: -100px; right: -100px; }
-    .c2 { width: 300px; height: 300px; background: #e84393; bottom: -50px; left: -80px; }
-    .c3 { width: 200px; height: 200px; background: #9b59b6; top: 50%; left: 60%; }
+    .c1 { width: 400px; height: 400px; background: #b388ff; top: -100px; right: -100px; }
+    .c2 { width: 300px; height: 300px; background: #ff80ab; bottom: -50px; left: -80px; }
+    .c3 { width: 200px; height: 200px; background: #b388ff; top: 50%; left: 60%; }
 
     .section {
       padding: 4rem 1.5rem;
     }
     .section-dark {
-      background: rgba(155, 89, 182, 0.05);
+      background: rgba(179, 136, 255, 0.05);
     }
     .container {
       max-width: 1200px;
@@ -201,8 +201,8 @@ import { Category } from '../../models/category.model';
       gap: 1.5rem;
     }
     .category-card {
-      background: rgba(155, 89, 182, 0.08);
-      border: 1px solid rgba(155, 89, 182, 0.2);
+      background: rgba(179, 136, 255, 0.08);
+      border: 1px solid rgba(179, 136, 255, 0.2);
       border-radius: 16px;
       padding: 2rem 1.5rem;
       text-decoration: none;
@@ -211,8 +211,8 @@ import { Category } from '../../models/category.model';
     }
     .category-card:hover {
       transform: translateY(-5px);
-      border-color: #e84393;
-      box-shadow: 0 10px 30px rgba(155, 89, 182, 0.2);
+      border-color: #ff80ab;
+      box-shadow: 0 10px 30px rgba(179, 136, 255, 0.2);
     }
     .category-icon {
       font-size: 2.5rem;
@@ -234,20 +234,20 @@ import { Category } from '../../models/category.model';
       gap: 1.5rem;
     }
     .product-card {
-      background: rgba(20, 10, 30, 0.8);
-      border: 1px solid rgba(155, 89, 182, 0.2);
+      background: rgba(15, 15, 30, 0.8);
+      border: 1px solid rgba(179, 136, 255, 0.2);
       border-radius: 16px;
       overflow: hidden;
       transition: all 0.3s;
     }
     .product-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(155, 89, 182, 0.2);
+      box-shadow: 0 10px 30px rgba(179, 136, 255, 0.2);
     }
     .product-img {
       position: relative;
       height: 200px;
-      background: linear-gradient(135deg, rgba(155, 89, 182, 0.2), rgba(232, 67, 147, 0.1));
+      background: linear-gradient(135deg, rgba(179, 136, 255, 0.2), rgba(255, 128, 171, 0.1));
       display: flex;
       align-items: center;
       justify-content: center;
@@ -262,7 +262,7 @@ import { Category } from '../../models/category.model';
       position: absolute;
       top: 10px;
       right: 10px;
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       color: white;
       padding: 0.3rem 0.8rem;
       border-radius: 20px;
@@ -271,7 +271,7 @@ import { Category } from '../../models/category.model';
     }
     .product-info { padding: 1.2rem; }
     .product-category {
-      color: #e84393;
+      color: #ff80ab;
       font-size: 0.8rem;
       font-weight: 600;
       text-transform: uppercase;
@@ -295,13 +295,13 @@ import { Category } from '../../models/category.model';
     .product-price {
       font-size: 1.3rem;
       font-weight: 700;
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .btn-add {
       padding: 0.5rem 1rem;
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       border: none;
       border-radius: 25px;
       color: white;
@@ -319,8 +319,8 @@ import { Category } from '../../models/category.model';
     .feature-card {
       text-align: center;
       padding: 2rem;
-      background: rgba(155, 89, 182, 0.05);
-      border: 1px solid rgba(155, 89, 182, 0.15);
+      background: rgba(179, 136, 255, 0.05);
+      border: 1px solid rgba(179, 136, 255, 0.15);
       border-radius: 16px;
     }
     .feature-icon { font-size: 2.5rem; margin-bottom: 1rem; }

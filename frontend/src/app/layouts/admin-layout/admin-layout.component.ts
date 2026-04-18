@@ -12,7 +12,7 @@ import { AuthService } from '../../services/auth.service';
       <!-- Sidebar -->
       <aside class="sidebar">
         <div class="sidebar-header">
-          <span class="logo-icon">🍄</span>
+          <img src="assets/logo.png" alt="Sabina" class="logo-img">
           <span class="logo-text">Sabina Admin</span>
         </div>
         <nav class="sidebar-nav">
@@ -63,8 +63,8 @@ import { AuthService } from '../../services/auth.service';
     }
     .sidebar {
       width: 260px;
-      background: linear-gradient(180deg, #1a0a2e 0%, #0d0517 100%);
-      border-right: 1px solid rgba(155, 89, 182, 0.2);
+      background: linear-gradient(180deg, #14142a 0%, #0a0a14 100%);
+      border-right: 1px solid rgba(179, 136, 255, 0.2);
       position: fixed;
       top: 0;
       left: 0;
@@ -76,13 +76,13 @@ import { AuthService } from '../../services/auth.service';
       display: flex;
       align-items: center;
       gap: 0.7rem;
-      border-bottom: 1px solid rgba(155, 89, 182, 0.2);
+      border-bottom: 1px solid rgba(179, 136, 255, 0.2);
     }
-    .logo-icon { font-size: 1.5rem; }
+    .logo-img { height: 36px; width: auto; border-radius: 50%; }
     .logo-text {
       font-size: 1.2rem;
       font-weight: 700;
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -106,23 +106,23 @@ import { AuthService } from '../../services/auth.service';
     }
     .sidebar-nav a:hover, .sidebar-nav a.active, .logout-btn:hover {
       color: white;
-      background: rgba(155, 89, 182, 0.15);
-      border-right: 3px solid #e84393;
+      background: rgba(179, 136, 255, 0.15);
+      border-right: 3px solid #ff80ab;
     }
     .sidebar-divider {
       height: 1px;
-      background: rgba(155, 89, 182, 0.15);
+      background: rgba(179, 136, 255, 0.15);
       margin: 0.8rem 1.5rem;
     }
     .nav-icon { font-size: 1.1rem; }
     .admin-main {
       flex: 1;
       margin-left: 260px;
-      background: #0d0517;
+      background: #0a0a14;
     }
     .admin-header {
-      background: rgba(20, 10, 30, 0.95);
-      border-bottom: 1px solid rgba(155, 89, 182, 0.2);
+      background: rgba(15, 15, 30, 0.95);
+      border-bottom: 1px solid rgba(179, 136, 255, 0.2);
       padding: 1rem 2rem;
       display: flex;
       align-items: center;
@@ -143,7 +143,7 @@ import { AuthService } from '../../services/auth.service';
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       display: flex;
       align-items: center;
       justify-content: center;

@@ -64,20 +64,20 @@ import { AuthService } from '../../services/auth.service';
     .container { max-width: 900px; margin: 0 auto; }
     .page-title {
       font-size: 2rem; margin-bottom: 2rem;
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .empty { text-align: center; padding: 3rem; color: #888; }
     .btn-primary {
       display: inline-block; margin-top: 1rem; padding: 0.7rem 2rem;
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       border-radius: 25px; color: white; text-decoration: none;
     }
     .checkout-grid { display: grid; grid-template-columns: 1fr 350px; gap: 2rem; }
     .checkout-form {
-      background: rgba(155, 89, 182, 0.08);
-      border: 1px solid rgba(155, 89, 182, 0.2);
+      background: rgba(179, 136, 255, 0.08);
+      border: 1px solid rgba(179, 136, 255, 0.2);
       border-radius: 16px; padding: 2rem;
     }
     .checkout-form h3 { color: #eee; margin-bottom: 1.5rem; }
@@ -87,8 +87,8 @@ import { AuthService } from '../../services/auth.service';
     }
     .form-group input, .form-group textarea {
       width: 100%; padding: 0.7rem 1rem;
-      background: rgba(20, 10, 30, 0.8);
-      border: 1px solid rgba(155, 89, 182, 0.3);
+      background: rgba(15, 15, 30, 0.8);
+      border: 1px solid rgba(179, 136, 255, 0.3);
       border-radius: 8px; color: #eee; font-size: 0.95rem;
       font-family: inherit; resize: vertical;
     }
@@ -96,15 +96,15 @@ import { AuthService } from '../../services/auth.service';
     .success { color: #2ecc71; margin-bottom: 1rem; padding: 0.7rem; background: rgba(46,204,113,0.1); border-radius: 8px; }
     .btn-order {
       width: 100%; padding: 0.9rem;
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       border: none; border-radius: 12px;
       color: white; font-size: 1.05rem; font-weight: 600;
       cursor: pointer;
     }
     .btn-order:disabled { opacity: 0.5; cursor: not-allowed; }
     .order-summary {
-      background: rgba(155, 89, 182, 0.08);
-      border: 1px solid rgba(155, 89, 182, 0.2);
+      background: rgba(179, 136, 255, 0.08);
+      border: 1px solid rgba(179, 136, 255, 0.2);
       border-radius: 16px; padding: 1.5rem;
       height: fit-content; position: sticky; top: 90px;
     }
@@ -112,7 +112,7 @@ import { AuthService } from '../../services/auth.service';
     .summary-item {
       display: flex; justify-content: space-between;
       padding: 0.6rem 0; color: #aaa; font-size: 0.9rem;
-      border-bottom: 1px solid rgba(155, 89, 182, 0.1);
+      border-bottom: 1px solid rgba(179, 136, 255, 0.1);
     }
     .summary-total {
       display: flex; justify-content: space-between;

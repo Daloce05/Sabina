@@ -105,7 +105,7 @@ import { Category } from '../../../models/category.model';
   styles: [`
     .admin-section h1 {
       color: #eee;
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -114,13 +114,13 @@ import { Category } from '../../../models/category.model';
     }
     .btn-new {
       padding: 0.6rem 1.5rem;
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       border: none; border-radius: 10px;
       color: white; cursor: pointer; font-weight: 600;
     }
     .form-card {
-      background: rgba(155, 89, 182, 0.08);
-      border: 1px solid rgba(155, 89, 182, 0.2);
+      background: rgba(179, 136, 255, 0.08);
+      border: 1px solid rgba(179, 136, 255, 0.2);
       border-radius: 16px; padding: 2rem; margin-bottom: 2rem;
     }
     .form-card h3 { color: #eee; margin-bottom: 1.5rem; }
@@ -130,41 +130,41 @@ import { Category } from '../../../models/category.model';
     .form-group label { display: block; color: #aaa; margin-bottom: 0.3rem; font-size: 0.9rem; }
     .form-group input, .form-group textarea, .form-group select {
       width: 100%; padding: 0.65rem 0.8rem;
-      background: rgba(20, 10, 30, 0.8);
-      border: 1px solid rgba(155, 89, 182, 0.3);
+      background: rgba(15, 15, 30, 0.8);
+      border: 1px solid rgba(179, 136, 255, 0.3);
       border-radius: 8px; color: #eee; font-family: inherit;
     }
-    .form-group select option { background: #1a0a2e; }
+    .form-group select option { background: #14142a; }
     .checkbox-label {
       display: flex !important; align-items: center; gap: 0.5rem; cursor: pointer; color: #aaa !important;
     }
     .error { color: #e74c3c; margin-bottom: 1rem; padding: 0.5rem; background: rgba(231,76,60,0.1); border-radius: 6px; }
     .btn-save {
       padding: 0.7rem 2rem;
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       border: none; border-radius: 10px;
       color: white; cursor: pointer; font-weight: 600;
     }
     .search-bar { margin-bottom: 1.5rem; }
     .search-bar input {
       width: 100%; max-width: 400px; padding: 0.65rem 1rem;
-      background: rgba(155, 89, 182, 0.08);
-      border: 1px solid rgba(155, 89, 182, 0.3);
+      background: rgba(179, 136, 255, 0.08);
+      border: 1px solid rgba(179, 136, 255, 0.3);
       border-radius: 10px; color: #eee;
     }
     .search-bar input::placeholder { color: #888; }
     .table-container { overflow-x: auto; }
     table { width: 100%; border-collapse: collapse; }
     th {
-      background: rgba(155, 89, 182, 0.1);
+      background: rgba(179, 136, 255, 0.1);
       color: #aaa; padding: 0.8rem; text-align: left; font-size: 0.85rem;
       text-transform: uppercase; letter-spacing: 0.5px;
     }
     td {
-      padding: 0.8rem; color: #ccc; border-bottom: 1px solid rgba(155, 89, 182, 0.1);
+      padding: 0.8rem; color: #ccc; border-bottom: 1px solid rgba(179, 136, 255, 0.1);
       font-size: 0.9rem;
     }
-    tr:hover { background: rgba(155, 89, 182, 0.05); }
+    tr:hover { background: rgba(179, 136, 255, 0.05); }
     .badge-yes { color: #2ecc71; background: rgba(46,204,113,0.15); padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.8rem; }
     .badge-no { color: #e74c3c; background: rgba(231,76,60,0.15); padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.8rem; }
     .actions { display: flex; gap: 0.5rem; }

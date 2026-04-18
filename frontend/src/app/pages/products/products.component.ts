@@ -31,7 +31,7 @@ import { Category } from '../../models/category.model';
           <div *ngFor="let product of products" class="product-card">
             <a [routerLink]="['/producto', product.id]" class="product-link">
               <div class="product-img">
-                <img *ngIf="product.imagen" [src]="'http://localhost:3000' + product.imagen" [alt]="product.nombre">
+                <img *ngIf="product.imagen" [src]="'https://sabina-utf1.onrender.com' + product.imagen" [alt]="product.nombre">
                 <div *ngIf="!product.imagen" class="product-placeholder">🍄</div>
                 <span class="badge" *ngIf="product.destacado">Destacado</span>
               </div>
@@ -68,7 +68,7 @@ import { Category } from '../../models/category.model';
     .container { max-width: 1200px; margin: 0 auto; }
     .page-title {
       font-size: 2rem; color: #eee; margin-bottom: 2rem;
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -77,8 +77,8 @@ import { Category } from '../../models/category.model';
     }
     .search-input, .filter-select {
       padding: 0.7rem 1rem;
-      background: rgba(155, 89, 182, 0.08);
-      border: 1px solid rgba(155, 89, 182, 0.3);
+      background: rgba(179, 136, 255, 0.08);
+      border: 1px solid rgba(179, 136, 255, 0.3);
       border-radius: 10px;
       color: #eee;
       font-size: 0.95rem;
@@ -86,39 +86,39 @@ import { Category } from '../../models/category.model';
     .search-input { flex: 1; min-width: 200px; }
     .search-input::placeholder { color: #888; }
     .filter-select { min-width: 200px; }
-    .filter-select option { background: #1a0a2e; }
+    .filter-select option { background: #14142a; }
     .products-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
       gap: 1.5rem;
     }
     .product-card {
-      background: rgba(20, 10, 30, 0.8);
-      border: 1px solid rgba(155, 89, 182, 0.2);
+      background: rgba(15, 15, 30, 0.8);
+      border: 1px solid rgba(179, 136, 255, 0.2);
       border-radius: 16px;
       overflow: hidden;
       transition: all 0.3s;
     }
     .product-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(155, 89, 182, 0.2);
+      box-shadow: 0 8px 25px rgba(179, 136, 255, 0.2);
     }
     .product-link { text-decoration: none; }
     .product-img {
       position: relative; height: 200px;
-      background: linear-gradient(135deg, rgba(155, 89, 182, 0.2), rgba(232, 67, 147, 0.1));
+      background: linear-gradient(135deg, rgba(179, 136, 255, 0.2), rgba(255, 128, 171, 0.1));
       display: flex; align-items: center; justify-content: center;
     }
     .product-img img { width: 100%; height: 100%; object-fit: cover; }
     .product-placeholder { font-size: 4rem; }
     .badge {
       position: absolute; top: 10px; right: 10px;
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       color: white; padding: 0.25rem 0.7rem;
       border-radius: 15px; font-size: 0.75rem; font-weight: 600;
     }
     .product-info { padding: 1rem 1.2rem 0.5rem; }
-    .product-category { color: #e84393; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; }
+    .product-category { color: #ff80ab; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; }
     .product-info h3 { color: #eee; margin: 0.3rem 0; font-size: 1rem; }
     .product-info p { color: #888; font-size: 0.85rem; line-height: 1.4; }
     .product-actions {
@@ -127,13 +127,13 @@ import { Category } from '../../models/category.model';
     }
     .price {
       font-size: 1.3rem; font-weight: 700;
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .btn-add {
       padding: 0.5rem 1rem;
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       border: none; border-radius: 25px;
       color: white; font-size: 0.85rem;
       cursor: pointer; transition: opacity 0.3s;
@@ -146,12 +146,12 @@ import { Category } from '../../models/category.model';
     }
     .page-btn {
       padding: 0.5rem 1.2rem;
-      background: rgba(155, 89, 182, 0.15);
-      border: 1px solid rgba(155, 89, 182, 0.3);
+      background: rgba(179, 136, 255, 0.15);
+      border: 1px solid rgba(179, 136, 255, 0.3);
       border-radius: 8px; color: #ddd;
       cursor: pointer; transition: all 0.3s;
     }
-    .page-btn:hover:not(:disabled) { background: #9b59b6; }
+    .page-btn:hover:not(:disabled) { background: #b388ff; }
     .page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
     .page-info { color: #aaa; }
   `]

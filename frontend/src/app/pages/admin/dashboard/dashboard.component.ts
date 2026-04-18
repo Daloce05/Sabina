@@ -64,7 +64,7 @@ import { OrderService } from '../../../services/order.service';
   styles: [`
     .dashboard h1 {
       color: #eee; margin-bottom: 2rem;
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -74,8 +74,8 @@ import { OrderService } from '../../../services/order.service';
       gap: 1.5rem; margin-bottom: 3rem;
     }
     .stat-card {
-      background: rgba(155, 89, 182, 0.08);
-      border: 1px solid rgba(155, 89, 182, 0.2);
+      background: rgba(179, 136, 255, 0.08);
+      border: 1px solid rgba(179, 136, 255, 0.2);
       border-radius: 16px; padding: 1.5rem;
       display: flex; align-items: center; gap: 1rem;
     }
@@ -91,8 +91,8 @@ import { OrderService } from '../../../services/order.service';
       gap: 1rem;
     }
     .action-card {
-      background: rgba(155, 89, 182, 0.08);
-      border: 1px solid rgba(155, 89, 182, 0.2);
+      background: rgba(179, 136, 255, 0.08);
+      border: 1px solid rgba(179, 136, 255, 0.2);
       border-radius: 12px; padding: 1.5rem;
       color: #ddd; text-decoration: none;
       text-align: center; font-size: 1rem;
@@ -100,9 +100,9 @@ import { OrderService } from '../../../services/order.service';
     }
     .action-card span { display: block; font-size: 2rem; margin-bottom: 0.5rem; }
     .action-card:hover {
-      border-color: #e84393;
+      border-color: #ff80ab;
       transform: translateY(-3px);
-      box-shadow: 0 5px 20px rgba(155, 89, 182, 0.2);
+      box-shadow: 0 5px 20px rgba(179, 136, 255, 0.2);
     }
   `]
 })

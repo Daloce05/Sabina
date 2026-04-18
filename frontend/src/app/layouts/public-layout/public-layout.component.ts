@@ -13,7 +13,7 @@ import { WhatsappService } from '../../services/whatsapp.service';
     <nav class="navbar">
       <div class="nav-container">
         <a routerLink="/" class="logo">
-          <span class="logo-icon">🍄</span>
+          <img src="assets/logo.png" alt="Sabina" class="logo-img">
           <span class="logo-text">Sabina</span>
         </a>
 
@@ -59,7 +59,7 @@ import { WhatsappService } from '../../services/whatsapp.service';
       <div class="footer-container">
         <div class="footer-grid">
           <div>
-            <h3>🍄 Sabina</h3>
+            <h3 class="footer-logo"><img src="assets/logo.png" alt="Sabina" class="footer-logo-img"> Sabina</h3>
             <p>Especialistas en hongos y sus derivados. Productos naturales de la más alta calidad.</p>
           </div>
           <div>
@@ -81,9 +81,9 @@ import { WhatsappService } from '../../services/whatsapp.service';
   `,
   styles: [`
     .navbar {
-      background: rgba(20, 10, 30, 0.95);
+      background: rgba(15, 15, 30, 0.95);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(155, 89, 182, 0.3);
+      border-bottom: 1px solid rgba(179, 136, 255, 0.3);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -105,9 +105,9 @@ import { WhatsappService } from '../../services/whatsapp.service';
       font-size: 1.5rem;
       font-weight: 700;
     }
-    .logo-icon { font-size: 1.8rem; }
+    .logo-img { height: 40px; width: auto; border-radius: 50%; }
     .logo-text {
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -122,7 +122,7 @@ import { WhatsappService } from '../../services/whatsapp.service';
       transition: color 0.3s;
     }
     .nav-links a:hover, .nav-links a.active {
-      color: #e84393;
+      color: #ff80ab;
     }
     .nav-actions {
       display: flex;
@@ -140,20 +140,20 @@ import { WhatsappService } from '../../services/whatsapp.service';
     }
     .btn-outline {
       padding: 0.5rem 1.2rem;
-      border: 1px solid #9b59b6;
+      border: 1px solid #b388ff;
       border-radius: 25px;
-      color: #9b59b6;
+      color: #b388ff;
       text-decoration: none;
       font-size: 0.9rem;
       transition: all 0.3s;
     }
     .btn-outline:hover {
-      background: #9b59b6;
+      background: #b388ff;
       color: white;
     }
     .btn-primary {
       padding: 0.5rem 1.2rem;
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       border-radius: 25px;
       color: white;
       text-decoration: none;
@@ -166,7 +166,7 @@ import { WhatsappService } from '../../services/whatsapp.service';
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       color: white;
       border: none;
       cursor: pointer;
@@ -177,8 +177,8 @@ import { WhatsappService } from '../../services/whatsapp.service';
       position: absolute;
       top: 50px;
       right: 0;
-      background: #1a0a2e;
-      border: 1px solid rgba(155, 89, 182, 0.3);
+      background: #14142a;
+      border: 1px solid rgba(179, 136, 255, 0.3);
       border-radius: 12px;
       padding: 0.5rem 0;
       min-width: 200px;
@@ -187,9 +187,9 @@ import { WhatsappService } from '../../services/whatsapp.service';
     .dropdown-name {
       display: block;
       padding: 0.7rem 1rem;
-      color: #e84393;
+      color: #ff80ab;
       font-weight: 600;
-      border-bottom: 1px solid rgba(155, 89, 182, 0.2);
+      border-bottom: 1px solid rgba(179, 136, 255, 0.2);
     }
     .dropdown a, .dropdown button {
       display: block;
@@ -204,13 +204,13 @@ import { WhatsappService } from '../../services/whatsapp.service';
       font-size: 0.9rem;
     }
     .dropdown a:hover, .dropdown button:hover {
-      background: rgba(155, 89, 182, 0.1);
-      color: #e84393;
+      background: rgba(179, 136, 255, 0.1);
+      color: #ff80ab;
     }
     .main-content { min-height: calc(100vh - 70px - 300px); }
     .footer {
-      background: #0d0517;
-      border-top: 1px solid rgba(155, 89, 182, 0.2);
+      background: #0a0a14;
+      border-top: 1px solid rgba(179, 136, 255, 0.2);
       padding: 3rem 0 1.5rem;
     }
     .footer-container {
@@ -224,15 +224,17 @@ import { WhatsappService } from '../../services/whatsapp.service';
       gap: 2rem;
       margin-bottom: 2rem;
     }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
+    .footer-logo-img { height: 30px; width: auto; border-radius: 50%; }
     .footer-grid h3 {
       font-size: 1.3rem;
       margin-bottom: 0.5rem;
-      background: linear-gradient(135deg, #9b59b6, #e84393);
+      background: linear-gradient(135deg, #b388ff, #ff80ab);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .footer-grid h4 {
-      color: #e84393;
+      color: #ff80ab;
       margin-bottom: 0.8rem;
     }
     .footer-grid p { color: #888; line-height: 1.6; }
@@ -242,9 +244,9 @@ import { WhatsappService } from '../../services/whatsapp.service';
       text-decoration: none;
       margin-bottom: 0.4rem;
     }
-    .footer-grid a:hover { color: #e84393; }
+    .footer-grid a:hover { color: #ff80ab; }
     .footer-bottom {
-      border-top: 1px solid rgba(155, 89, 182, 0.15);
+      border-top: 1px solid rgba(179, 136, 255, 0.15);
       padding-top: 1.5rem;
       text-align: center;
       color: #666;
