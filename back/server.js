@@ -38,7 +38,8 @@ app.use(cors({
   origin: [
     'http://localhost:4200',
     'https://sabina-utf1.onrender.com',
-    /\.onrender\.com$/
+    /\.onrender\.com$/,
+    /\.vercel\.app$/
   ],
   credentials: true
 }));
