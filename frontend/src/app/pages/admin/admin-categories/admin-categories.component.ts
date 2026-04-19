@@ -45,6 +45,7 @@ import { Category } from '../../../models/category.model';
           <div class="cat-actions">
             <button (click)="edit(cat)" class="btn-edit">✏️ Editar</button>
             <button (click)="delete(cat.id)" class="btn-delete">🗑️ Eliminar</button>
+            <button (click)="deletePermanent(cat.id)" class="btn-delete" title="Eliminar permanentemente">❌</button>
           </div>
         </div>
       </div>
@@ -151,6 +152,12 @@ export class AdminCategoriesComponent implements OnInit {
   delete(id: number) {
     if (confirm('¿Eliminar esta categoría?')) {
       this.categoryService.deleteCategory(id).subscribe(() => this.load());
+    }
+  }
+
+  deletePermanent(id: number) {
+    if (confirm('¿Eliminar PERMANENTEMENTE esta categoría? Esta acción no se puede deshacer.')) {
+      this.categoryService.deleteCategoryPermanent(id).subscribe(() => this.load());
     }
   }
 }

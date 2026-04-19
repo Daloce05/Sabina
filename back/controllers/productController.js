@@ -118,6 +118,20 @@ const productController = {
     }
   },
 
+  // DELETE /api/products/:id/permanent (admin)
+  async eliminarPermanentemente(req, res) {
+    try {
+      const product = await Product.findByPk(req.params.id);
+      if (!product) {
+        return res.status(404).json({ success: false, message: 'Producto no encontrado.' });
+      }
+      await product.destroy();
+      res.json({ success: true, message: 'Producto eliminado permanentemente.' });
+    } catch (error) {
+      res.status(500).json({ success: false, message: 'Error al eliminar permanentemente el producto.' });
+    }
+  },
+
   // GET /api/products/admin/all (admin - incluye inactivos)
   async listarAdmin(req, res) {
     try {

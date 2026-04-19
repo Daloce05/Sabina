@@ -83,6 +83,20 @@ const categoryController = {
     }
   },
 
+  // DELETE /api/categories/:id/permanent (admin)
+  async eliminarPermanentemente(req, res) {
+    try {
+      const category = await Category.findByPk(req.params.id);
+      if (!category) {
+        return res.status(404).json({ success: false, message: 'Categoría no encontrada.' });
+      }
+      await category.destroy();
+      res.json({ success: true, message: 'Categoría eliminada permanentemente.' });
+    } catch (error) {
+      res.status(500).json({ success: false, message: 'Error al eliminar permanentemente la categoría.' });
+    }
+  },
+
   // GET /api/categories/admin/all
   async listarAdmin(req, res) {
     try {

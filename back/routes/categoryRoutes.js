@@ -9,7 +9,11 @@ const router = express.Router();
 router.get('/admin/all', auth, adminOnly, categoryController.listarAdmin);
 router.post('/', auth, adminOnly, upload.single('imagen'), categoryController.crear);
 router.put('/:id', auth, adminOnly, upload.single('imagen'), categoryController.actualizar);
+
+// Eliminación lógica
 router.delete('/:id', auth, adminOnly, categoryController.eliminar);
+// Eliminación permanente
+router.delete('/:id/permanent', auth, adminOnly, categoryController.eliminarPermanentemente);
 
 // Rutas públicas
 router.get('/', categoryController.listar);

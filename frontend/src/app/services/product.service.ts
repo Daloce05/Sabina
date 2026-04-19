@@ -46,4 +46,8 @@ export class ProductService {
   deleteProduct(id: number): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
+
+  deleteProductPermanent(id: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${id}/permanent`);
+  }
 }

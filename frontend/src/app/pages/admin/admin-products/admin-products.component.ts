@@ -95,6 +95,7 @@ import { Category } from '../../../models/category.model';
               <td class="actions">
                 <button (click)="edit(p)" class="btn-edit">✏️</button>
                 <button (click)="delete(p.id)" class="btn-delete">🗑️</button>
+                <button (click)="deletePermanent(p.id)" class="btn-delete" title="Eliminar permanentemente">❌</button>
               </td>
             </tr>
           </tbody>
@@ -245,6 +246,12 @@ export class AdminProductsComponent implements OnInit {
   delete(id: number) {
     if (confirm('¿Eliminar este producto?')) {
       this.productService.deleteProduct(id).subscribe(() => this.loadProducts());
+    }
+  }
+
+  deletePermanent(id: number) {
+    if (confirm('¿Eliminar PERMANENTEMENTE este producto? Esta acción no se puede deshacer.')) {
+      this.productService.deleteProductPermanent(id).subscribe(() => this.loadProducts());
     }
   }
 }
